@@ -1,0 +1,42 @@
+
+<div class="loginbody">
+    <form class="form" [formGroup]="signupForm" (ngSubmit)="submitDetails()">
+        <div class="title">Welcome to TaskWeatherApp,<br><span>Signup to continue</span></div>
+
+
+        <input class="input" name="fullName" placeholder="Full Name" type="text" formControlName="fullName">
+        <small *ngIf="fullName.invalid && (fullName.dirty) || (fullName.touched)" style="color: red;">
+            <div *ngIf="fullName.errors?.['required']">Name is required</div>
+            <div *ngIf="fullName.errors?.['pattern']">Name should be valid</div>
+        </small>
+    
+        <input class="input" name="email" placeholder="Email" type="email" formControlName="email">
+        <small *ngIf="email.invalid && (email.dirty) || (email.touched)" style="color: red;">
+            <div *ngIf="email.errors?.['required']">Email is required</div>
+            <div *ngIf="email.errors?.['email']">Email should be valid</div>
+        </small>
+
+        <input class="input" name="password" placeholder="Password" type="password" formControlName="password">
+        <small *ngIf="password.invalid && (password.dirty) || (password.touched)" style="color: red;">
+            <div *ngIf="password.errors?.['required']">Password is required</div>
+        </small>
+
+        <input class="input" name="confirmPassword" placeholder="Confirm Password" type="password" formControlName="confirmPassword">
+        <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty) || (confirmPassword.touched)" style="color: red;">
+            <div *ngIf="password.errors?.['required']">Make sure passwords are same.</div>
+        </small>
+
+        <small *ngIf="signupForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid">
+            Password should match
+        </small>
+    
+    
+    
+        <div class="login-with">
+        </div>
+        <button class="button-confirm" [disabled]="signupForm.invalid" type="submit">SignUp→</button>
+        <div class="centered-text">
+            Already a member? <a routerLink="/login">Login</a>
+        </div>
+      </form>
+    </div>

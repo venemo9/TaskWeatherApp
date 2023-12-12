@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "fullName": "Yash",
+      "email": "yashnano99@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "fullName": "Yash",
+      "email": "yashnano99@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "fullName": "Yash",
+      "email": "def@def.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "fullName": "gaga",
+      "email": "gaga@agag.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "fullName": "adsf",
+      "email": "adf@asd.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "fullName": "qwe",
+      "email": "qwe@qwe.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "fullName": "Yash",
+      "email": "def@def.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "fullName": "Yash",
+      "email": "def@def.com",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "fullName": "Yash",
+      "email": "abc@abc.com",
+      "password": "123",
+      "id": 9
+    },
+    {
+      "fullName": "Yash",
+      "email": "yash@gmail.com",
+      "password": "123",
+      "id": 10
+    },
+    {
+      "fullName": "Yash",
+      "email": "abc@abc.com",
+      "password": "123",
+      "id": 11
+    },
+    {
+      "fullName": "Yash",
+      "email": "abc@abc.com",
+      "password": "123",
+      "id": 12
+    }
+  ]
+}

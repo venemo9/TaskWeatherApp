@@ -1,0 +1,42 @@
+
+<div class="card shadow-lg mt-5">
+    <div class="card-header text-center py-4 border-0">
+        <h1 class="display-6 fw-bold">
+            To Do List
+        </h1>
+    </div>
+    <div class="notepad">
+    <div class="card-body p-4">
+        
+        
+        <ul class="list-group">
+            <li class="list-group-item mb-3">
+                <div class="input-group">
+                    <input type="text" class="form-control border-0 py-4 shadow-none" placeholder="Enter ToDo" #titleInput>
+                    <button class="btn" title="Add New" class="group cursor-pointer outline-none hover:rotate-90 duration-300" (click)="onClick(titleInput)">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="40px"
+                            height="50px"
+                            viewBox="0 0 24 24"
+                            class="stroke-indigo-400 fill-none group-hover:fill-indigo-800 group-active:stroke-indigo-200 group-active:fill-indigo-600 group-active:duration-0 duration-300">
+                            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke-width="2"></path>
+                            <path d="M8 12H16" stroke-width="2"></path>
+                            <path d="M12 16V8" stroke-width="2"></path>
+                        </svg>
+                </button>    
+                </div>
+            </li>
+            <li class="list-group-item mb-2 border py-3 rounded-3" *ngFor="let item of todos">
+                <span>
+                    <i class="text-success mr-2" (click)="onStatusChange(item.id, !item.isDone)" [ngClass]="item.isDone?'fa-solid fa-circle-check': 'fa-regular fa-circle'"></i>
+                    {{item.title}}
+                    <span class="float-end text-secondary" (click)="onDelete(item.id)">
+                        <i class="fa-regular fa-trash-can" style="color: #ff0000;"></i>
+                    </span>
+                </span>
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>

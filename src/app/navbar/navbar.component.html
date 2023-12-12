@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+    <img src="assets/images/favicon.png" class="toolbar-logo">
+    <span class="title">TaskWeatherApp</span>
+
+    <div class="spacer">
+
+    </div>
+    <a mat-raised-button color="accent" class="toolbar-link" routerLink="to-do">To-do</a>
+    <a mat-raised-button color="accent" class="toolbar-link" routerLink="weather">Weather</a>
+    <a mat-raised-button color="warn" class="toolbar-link" (click)="logOut()">Logout</a>
+</mat-toolbar>

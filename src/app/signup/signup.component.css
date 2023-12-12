@@ -1,0 +1,113 @@
+.loginbody {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+
+.form {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 30px; /* Increase padding for more space inside the form */
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px; /* Increase the gap between elements */
+    border-radius: 10px; /* Increase border-radius for rounded corners */
+    border: 3px solid var(--main-color);
+    box-shadow: 6px 6px var(--main-color);
+  }
+  
+  .title {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 24px; /* Increase font size */
+    margin-bottom: 35px; /* Increase margin */
+  }
+  
+  .title span {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 20px; /* Increase font size */
+  }
+  
+  .input {
+    width: 300px; /* Increase width of input */
+    height: 50px; /* Increase height of input */
+    border-radius: 8px; /* Increase border-radius for rounded corners */
+    border: 3px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 6px 6px var(--main-color);
+    font-size: 18px; /* Increase font size */
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 10px 15px; /* Increase padding */
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .input:focus {
+    border: 3px solid var(--input-focus); /* Increase border thickness */
+  }
+  
+  .login-with {
+    display: flex;
+    gap: 30px; /* Increase the gap between elements */
+  }
+  
+  .button-log {
+    cursor: pointer;
+    width: 50px; /* Increase width of the button */
+    height: 50px; /* Increase height of the button */
+    border-radius: 100%;
+    border: 3px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 6px 6px var(--main-color);
+    color: var(--font-color);
+    font-size: 30px; /* Increase font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 30px; /* Increase icon size */
+    height: 30px; /* Increase icon size */
+  }
+  
+  .button-log:active,
+  .button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(4px, 4px); /* Adjust active state translation */
+  }
+  
+  .button-confirm {
+    margin: 70px auto 0 auto; /* Increase top margin */
+    width: 150px; /* Increase width of the confirmation button */
+    height: 50px; /* Increase height of the confirmation button */
+    border-radius: 8px; /* Increase border-radius for rounded corners */
+    border: 3px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 6px 6px var(--main-color);
+    font-size: 22px; /* Increase font size */
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+  
+  .centered-text {
+    
+    margin-left: 70px;
+  }
+  

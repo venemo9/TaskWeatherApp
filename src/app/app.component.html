@@ -1,0 +1,11 @@
+<app-navbar *ngIf="!isAuthPage()"></app-navbar>
+<body>
+<div class="container">
+  <div class="row justify-content-center">
+    <div>
+      <router-outlet></router-outlet>     
+      <p-toast></p-toast>
+    </div>   
+  </div>  
+</div>
+</body>

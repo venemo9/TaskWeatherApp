@@ -1,0 +1,221 @@
+:root{
+    -shadow-light: rgba(255, 255, 255, 0.1);
+    -shadow-dark: rgba(0, 0, 0, 0.95);
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+.search input{
+    margin-top: 1rem;
+    border-radius: 10px;
+    outline: 2px solid #67917a;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #d6f1ff;
+    outline-offset: 3px;
+    padding: 10px 12.5px;
+    transition: all 0.2s ease;
+    width: 300px;
+}
+
+.search input:hover {
+    background-color: #fff;
+  }
+  
+.search input:focus {
+    outline-offset: -6px;
+    background-color: #d6f1ff;
+  }
+
+.search input::placeholder {
+    color: #000000; /* Set the desired placeholder color */
+}
+
+.container {
+    width: 700px;
+    height: 80vh;
+    
+    --s: 140px; /* control the size */
+
+  --_g: #0000 52%, #170409 /* first color */ 54% 57%, #0000 59%;
+  background: radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0
+      calc(var(--s) / 2),
+    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s) / 2)
+      0,
+    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
+    radial-gradient(farthest-side at 50% -33.33%, var(--_g)), #67917a; /* second color */
+  background-size: calc(var(--s) / 4.667) var(--s),
+    var(--s) calc(var(--s) / 4.667);
+
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px #ffffff;
+    margin: 0 auto; /* Add this line to center the container horizontally */
+}
+
+.upper-data {
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.upper-data img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.lower-data{
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-data{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location{
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+
+}
+
+.temperature{
+    color: white;
+    font-size: 6em;
+    text-align: center;
+    font-weight: 900;
+}
+
+.more-info-label{
+    color:rgb(0, 0, 0);
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 1000;
+    background-color: #67917a;
+    border-radius: 20px;
+    display: inline;
+    padding: 5px 1px;
+    
+
+}
+.more-info-container {
+    flex: 1;
+
+    background: #121212; /* Fallback for browsers that don't support gradients */
+    background: linear-gradient(
+        135deg,
+        #121212 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        #121212 50%,
+        #121212 75%,
+        #1a1a1a 75%,
+        #1a1a1a
+    );
+    background-size: 40px 40px;
+
+    /* Animation */
+    animation: move 4s linear infinite;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+.info-block{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-block-label{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-block-label img{
+    width:5em;
+}
+
+.info-block-label span{
+    color:white;
+    font-size: 1.2em;
+    
+    
+}
+
+
+.info-block-value{
+    width:50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color:white;
+    font-size: 1.5em;
+}
+
+

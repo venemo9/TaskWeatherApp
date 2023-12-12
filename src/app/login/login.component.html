@@ -1,0 +1,28 @@
+
+<div class="loginbody">
+<form class="form" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <div class="title">Welcome to TaskWeatherApp,<br><span>Login to continue</span></div>
+    <input class="input" name="email" placeholder="Email" type="email" formControlName="email">
+
+    <small *ngIf="email.invalid && (email.dirty) || (email.touched)" style="color: red;">
+        <div *ngIf="email.errors?.['required']">Email is required</div>
+        <div *ngIf="email.errors?.['email']">Email should be valid</div>
+    </small>
+
+
+    <input class="input" name="password" placeholder="Password" type="password" formControlName="password">
+
+    <small *ngIf="password.invalid && (password.dirty) || (password.touched)" style="color: red;">
+        <div *ngIf="password.errors?.['required']">Password is required</div>
+    </small>
+
+
+
+    <div class="login-with">
+    </div>
+    <button class="button-confirm" [disabled]="loginForm.invalid" type="submit">Login→</button>
+    <div>
+        Not a member? <a routerLink="/signup"> Signup</a>
+    </div>
+  </form>
+</div>
